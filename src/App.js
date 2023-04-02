@@ -20,8 +20,7 @@ function CatImage() {
       }
     });
   };
-  
-
+ 
   return (
     <div>
       {imageUrl ? (
@@ -33,5 +32,4 @@ function CatImage() {
     </div>
   );
 }
-
 export default CatImage;
