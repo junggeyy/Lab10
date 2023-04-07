@@ -21,15 +21,17 @@ function CatImage() {
     });
   };
  
-  return (
-    <div>
-      {imageUrl ? (
-        <img src={imageUrl} alt="Random cat" />
-      ) : (
-        <p>No cat image yet</p>
-      )}
-      <button onClick={fetchCatImage}>Get Random Cat Image</button>
-    </div>
-  );
+ return (
+      <div style={{ width: '800px', margin: '0 auto', textAlign: 'center'}}>
+        <button onClick={fetchCatImage} style={{ position: 'fixed', top: 2, left: 10 }}>Get Random Cat Image</button>
+        <p></p>
+        <b style={{ display: 'block', marginBottom: '10px' }}>CAT IMAGES API</b> 
+        {imageUrl ? (
+          <img src={imageUrl} alt="Random cat" style={{ maxWidth: '100%', display: 'block', margin: '0 auto' }} />
+        ) : (
+          <p>No cat image yet</p>
+        )}
+      </div>
+    );
 }
 export default CatImage;
